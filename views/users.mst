@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="user_div">
+        <h1 class="users">Users</h1>
+            <div style="text-align: center;">
+                <input type="button" class="button" id="left" value="<--" />
+                <input style="background: rgba(0, 0, 0, 0);border: none;width: 15px;" id="currPage" disabled/> /  <input style="background: rgba(0, 0, 0, 0);border: none;width: 15px;" id="quantity" disabled/>
+                <input type="button" class="button" id="right" value="-->" /><br>
+            </div>
+            <div id="listUser">
+            </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="javascripts/ui.js"></script>
+    <script src="javascripts/user.js"></script>
+</body>
+
+</html>

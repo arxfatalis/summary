@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="main_div" style="height: 600px">
+        <h1>Create New Game</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div style="padding: 10px"><input type="text" name="name" placeholder="Name"></div>
+            <div style="padding: 10px"><input type="text" name="genre" placeholder="Genre"></div>
+            <div style="padding: 10px"><input type="number" name="year" placeholder="Year"></div>
+            <div style="padding: 10px"><input type="number" name="rating" placeholder="Rating"></div>
+            <div style="padding: 10px"><input type="text" name="creator" placeholder="Creator"></div>
+            <div style="padding: 10px">
+              <label>
+                Image:
+                <input type="file" name="img" style="margin-left: 15px">
+              </label>
+            </div>
+            <div style="padding: 10px"><input type="text" name="about" placeholder="About the game"></div>
+            <div style="padding: 10px"><input type="submit" name="submit" value="Send " onclick="valid(document.getElementById('form'))"></div>
+        </form>
+    </div>
+</body>
+
+</html>

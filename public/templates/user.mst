@@ -1,0 +1,22 @@
+{{#users.length}}
+    <table class="table_dark">
+        <tbody>
+            <tr>
+                <th>Login</th>
+                <th>Full name</th>
+                <th>ID</th>
+            </tr>
+            {{#users}}
+            <tr>
+                <td><a class="click" style="width: 200px; relative;text-align: center;" href="/users/{{_id}}">{{login}}</a></td>
+                <td><a style="text-align: center;">{{fullname}}</a></td>
+                <td><a style="text-align: center;">{{registeredAt}}</a></td>
+            </tr>
+            {{/users}}
+        </tbody>
+    </table>
+{{/users.length}}
+
+{{^users}}
+    <h3>No users found</h3>
+{{/users}}

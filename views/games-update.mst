@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{>head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="main_div" style="height: 600px">
+        <h1>Create New Game</h1>
+        <form action="/games/update/{{game.id}}" method="post" enctype="multipart/form-data">
+            <div><p>Name:</p></div>
+            <div style="padding: 10px"><input type="text" name="name" placeholder="Name" value="{{game.name}}"></div>
+            <div><p>Genre:</p></div>
+            <div style="padding: 10px"><input type="text" name="genre" placeholder="Genre" value="{{game.genre}}"></div>
+            <div><p>Year:</p></div>
+            <div style="padding: 10px"><input type="number" name="year" placeholder="Year" value="{{game.year}}"></div>
+            <div><p>Rating:</p></div>
+            <div style="padding: 10px"><input type="number" name="rating" placeholder="Rating" value="{{game.rating}}"></div>
+            <div><p>Creator:</p></div>
+            <div style="padding: 10px"><input type="text" name="creator" placeholder="Creator" value="{{game.creator}}"></div>
+            <div style="padding: 10px">
+              <label>
+                Image:
+                <input type="file" name="img" style="margin-left: 15px" value="{{game.img}}">
+              </label>
+            </div>
+            <div style="padding: 10px"><input type="text" name="about" placeholder="About the game"></div>
+            <div style="padding: 10px"><input type="submit" name="submit" value="Send " onclick="valid(document.getElementById('form'))"></div>
+        </form>
+    </div>
+</body>
+
+</html>

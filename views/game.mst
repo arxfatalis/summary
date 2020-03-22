@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="div_heroes azir">
+        <div>
+            <h1>{{ game.name }}</h1>
+        </div>
+        <div class="info">
+            <div>
+                <table cols="1" class="table_dark" id="t_1">
+                    <tr>
+                        <td id="heroes_img">
+                            <img src="{{ game.img }}" class="img">
+                            <br>
+                            {{ game.name }}
+                        </td>
+                    </tr>
+                </table>
+                <form action="/games/delete/{{game.id}}" method="post">
+                  <button id="delete_button">Delete</button>
+                </form>
+                <form action="/games/update/{{game.id}}" method="get">
+                  <button>Update</button>
+                </form>
+            </div>
+        </div>
+        <div class="lor">
+            <h1> About </h1>
+            <p>{{ game.about }}</p>
+        </div>
+    </div>
+    {{! <div id="modalWindow" class="modal">
+        <div class="modalContent">
+            <span class="Yes">&times;</span>
+            <span class="No"></span>
+            <p></p>
+        </div>
+    </div> }}
+</body>
+
+</html>

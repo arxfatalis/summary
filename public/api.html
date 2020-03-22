@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>My API Spec</title>
+</head>
+
+<body lang="en" style="background-color: lightgray; margin: 2cm; line-height: 10px;">
+    <h1 style="text-align: center;">My API Spec</h2>
+        <h2 style="margin-top: 50px;">Entity: User</h2>
+        <h4>/api/v1/user</h4>
+        <h4>Authentication: HTTP Basic</h4>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Params</th>
+                <th>Returns</th>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>json representation of user</td>
+                <td>status object</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>user id (optional)</td>
+                <td>user, list of users or status object</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>json representation of user</td>
+                <td>status object</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>user id</td>
+                <td>status object</td>
+            </tr>
+        </table>
+
+        <h2 style="margin-top: 50px;">Entity: Character</h2>
+        <h4>/api/v1/character</h4>
+        <h4>Authentication: HTTP Basic</h4>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Params</th>
+                <th>Returns</th>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>json representation of character</td>
+                <td>status object</td>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>character id (optional), page (optional)</td>
+                <td>character, list of characters or status object</td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>json representation of character</td>
+                <td>status object</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>character id</td>
+                <td>status object</td>
+            </tr>
+        </table>
+</body>
+
+</html>

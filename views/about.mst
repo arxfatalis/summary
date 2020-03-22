@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="main_div">
+        <h1 id="home_p">About</h1>
+        <p id="home_p"><strong>Website created by Kulinich Yan student of KPI FAM KP-82</strong></p>
+    </div>
+</body>
+
+</html>

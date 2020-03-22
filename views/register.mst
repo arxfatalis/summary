@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="main_div" style="height: 600px">
+        <h1>Register</h1>
+        <form method="post" id="form" action="/auth/register" >
+            <div style="padding: 10px"><input type="text" name="fullname" placeholder="Enter your fullname"required></div>
+            <div style="padding: 10px"><input id="login" type="text" name="login" placeholder="Enter Login" minlength="3" maxlength="12" required></div>
+            <div id="alreadyExists"></div>
+            <div style="padding: 10px"><input id="pass1" type="password" name="password" placeholder="Enter password" required></div>
+            <div style="padding: 10px"><input id="pass2" type="password" name="passwordrepeat" placeholder="Enter password again" required></div>
+            <div id="passNotEq"></div>
+            <div style="padding: 10px"><input type="text" name="bio" placeholder="Write something about you"></div>
+            <div style="padding: 10px">
+              <label>
+                Avatar:
+                <input type="file" name="avaUrl" style="margin-left: 15px">
+              </label>
+            </div>
+            <div style="padding: 10px"><input type="submit"  value="Register" ></div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="/javascripts/register.js"></script>
+</body>
+
+</html>

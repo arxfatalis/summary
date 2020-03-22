@@ -1,0 +1,23 @@
+
+    <div class="box_div">
+        <div class="center"><img class="z" src="https://cdn.iconscout.com/icon/free/png-512/league-of-legends-555171.png"></div>
+        <div class="box_block">
+            <a class="header_button" href="/">Home</a>
+            <a class="header_button" href="/users">Users</a>
+            <a class="header_button" href="/characters">Characters</a>
+            <a class="header_button" href="/games">Games</a>
+            <a class="header_button" href="/about ">About</a>
+        </div>
+        <div class="log">
+            {{#user}}
+                <a class="header_button" href="users/{{user._id}}">{{user.login}}</a>
+                <form action="/auth/logout" method="post">
+                    <input class="header_button"  id="logout" type="submit" value="Logout">
+                </form>
+            {{/user}}
+            {{^user}}
+            <a class="header_button" href="/auth/login">Login</a>
+            <a class="header_button" href="/auth/register">Register</a>
+            {{/user}}
+        </div>
+    </div>

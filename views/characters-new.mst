@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="main_div" style="height: 600px">
+        <h1>Create New Character</h1>
+        <form method="post" enctype="multipart/form-data">
+            <div style="padding: 10px"><input type="text" name="fullName" placeholder="Full Name"></div>
+            <div style="padding: 10px"><input type="text" name="region" placeholder="Region"></div>
+            <div style="padding: 10px"><input type="number" name="charYear" placeholder="Year"></div>
+            <div style="padding: 10px"><input type="number" name="rating" placeholder="Rating"></div>
+            <div style="padding: 10px"><input type="text" name="name2" placeholder="Also Known As"></div>
+            <div style="padding: 10px">
+              <label>
+                Image:
+                <input type="file" name="img" style="margin-left: 15px">
+              </label>
+            </div>
+            <div style="padding: 10px"><input type="text" name="lor" placeholder="LOR"></div>
+            <div style="padding: 10px">
+              <button onclick="return addSkin(this)">
+                Add Skin
+              </button>
+            </div>
+            <div id="skins-block"></div>
+            <div style="padding: 10px; margin-top: 50px"><input type="submit"></div>
+        </form>
+    </div>
+    <script>
+    let idx = 0;
+
+    function addSkin(el) {
+      let s = document.getElementById('skins-block');
+      s.innerHTML += `
+        <div style="padding: 10px">
+          <input type="text" name="skinTitles" placeholder="Skin Title">
+        </div>
+        <div style="padding: 10px">
+          <label>
+            Skin:
+            <input type="file" name="skinImgs" style="margin-left: 15px">
+          </label>
+        </div>
+      `;
+
+      idx++;
+
+      return false;
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{{#games.length}}
+    <table class="table_dark char">
+        <tbody>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+            </tr>
+            {{ #games }}
+            <tr>
+                <td alt="Something went wrong ..."><img src="{{ img }}"></td>
+                <td><a href="games/{{ _id }}">{{ name }}</a></td>
+            </tr>
+            {{ /games }}
+        </tbody>
+    </table>
+{{/games.length}}
+
+{{^games}}
+    <h3>No events found</h3>
+{{/games}}

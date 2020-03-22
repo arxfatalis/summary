@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="div_heroes azir us">
+        <h1>User({{ user.id }})</h1>
+        <div>
+            <form action="/users/delete/{{user._id}}" method="post">
+                  <button id="delete_button">Delete</button>
+            </form>
+            <form action="/users/update/{{user._id}}" method="post">
+                  <button id="delete_button">Change your profile</button>
+            </form>
+            <p><img src="../images/user.jpeg" alt="Something went wrong..."></p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Login :</th>
+                    <td>{{ user.login }}</td>
+                </tr>
+                <tr>
+                    <th>Full name :</th>
+                    <td>{{ user.fullname }}</td>
+                </tr>
+                <tr>
+                    <th>Date of registration :</th>
+                    <td>{{ user.registeredAt }}</td>
+                </tr>
+                <tr>
+                    <th>BIO :</th>
+                    <td>{{ user.bio }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

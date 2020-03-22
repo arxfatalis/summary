@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="user_div char">
+        <h1 class="characters">Characters</h1>
+        <a href="characters/new"><h2 style="color: white">Create New Character</h2></a>
+        {{ #term }}
+        <h2 style="color: white">Results for "{{ term }}"</h2>
+        {{ /term }}
+        <div style="text-align: center;">
+                <input id="searchString" type="text" name="search" placeholder="{{searchString}}"><br>
+                <input type="button" class="button" id="left" value="<--" />
+                <input style="background: rgba(0, 0, 0, 0);border: none;width: 15px;" id="currPage" disabled/> /  <input style="background: rgba(0, 0, 0, 0);border: none;width: 15px;" id="quantity" disabled/>
+                <input type="button" class="button" id="right" value="-->" /><br>
+          </div>
+        <div id="listChar"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="javascripts/ui.js"></script>
+    <script src="javascripts/character.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+{{> head }}
+</head>
+
+<body>
+    {{> header }}
+    <div class="div_heroes azir">
+        <div>
+            <h1>{{ character.fullName }}</h1>
+        </div>
+        <div class="info">
+            <div>
+                <table cols="1" class="table_dark" id="t_1">
+                    <tr>
+                        <td id="heroes_img">
+                            <img src="{{ character.img }}" class="img">
+                            <br>
+                            {{ character.fullName }}
+                            <br>
+                            {{ character.name2 }}
+                        </td>
+                    </tr>
+                </table>
+                <form method="post">
+                  <button>Delete</button>
+                </form>
+            </div>
+            <div id="skins">
+                <table cols="3" class="table_dark">
+                    <tr>
+                        <th></th>
+                        <th>Skins</th>
+                        <th></th>
+                    </tr>
+                    {{ #skins }}
+                    <tr>
+                    {{ #. }}
+                        <td class="photo" data-title="{{ title }}">
+                            <img src="{{ img }}" alt="Something went wrong..." width="121" height="71">
+                        </td>
+                    {{ /. }}
+                    </tr>
+                    {{ /skins }}
+                </table>
+            </div>
+        </div>
+        <div class="lor">
+            <h1> LOR </h1>
+            <p>{{ character.lor }}</p>
+        </div>
+    </div>
+</body>
+
+</html>

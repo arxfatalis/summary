@@ -1,0 +1,22 @@
+{{#characters.length}}
+    <table class="table_dark char">
+        <tbody>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Origin</th>
+            </tr>
+            {{ #characters }}
+            <tr>
+                <td alt="Something went wrong ..."><img src="{{ img }}"></td>
+                <td><a href="characters/{{_id}}" style="cursor:pointer">{{ fullName }}</a></td>
+                <td>League of Legends</td>
+            </tr>
+            {{ /characters }}
+        </tbody>
+    </table>
+{{/characters.length}}
+
+{{^characters}}
+    <h3>No events found</h3>
+{{/characters}}
